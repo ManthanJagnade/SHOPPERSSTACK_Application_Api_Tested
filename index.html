@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <div class="universe-bg">
+
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+        <div class="planet planet5"></div>
+        <div class="planet planet6"></div>
+        <div class="planet planet7"></div>
+
+        <!-- Stars -->
+        <script>
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = `${Math.random() * 2 + 1}px`;
+                star.style.height = star.style.width;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                document.querySelector('.universe-bg').appendChild(star);
+            }
+        </script>
+    </div>
+    <div class="container">
+        <h1><span>Registration Form</span></h1>
+
+        <div class="input-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="Enter your first name">
+        </div>
+
+        <div class="input-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Enter your last name">
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" placeholder="Enter your email ID">
+        </div>
+
+        <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="input-group">
+            <label for="country">Country:</label>
+            <select id="country">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="state">State:</label>
+            <select id="state">
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Rajasthan">Rajasthan</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="city">City:</label>
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+            </select>
+        </div>
+
+        <!-- New Input Group for Zone ID -->
+        <div class="input-group">
+            <label for="zone-id">Zone ID:</label>
+            <input type="text" id="zone-id" placeholder="Enter your Zone ID">
+        </div>
+
+        <!-- New Input Group for Password -->
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+
+        <div class="input-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="MALE"> Male</label>
+                <label><input type="radio" name="gender" value="FEMALE"> Female</label>
+                <label><input type="radio" name="gender" value="OTHER"> Other</label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button onclick="submitRegistration()" class="register-btn">Register</button>
+            <a href="./Login/login.html"><button class="Login" >Login</button></a>
+            
+            
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
